@@ -1,3 +1,14 @@
 @import "tailwindcss";
 
-
+.spinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:#766DF4;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    animation: sh1 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sh1 {
+  33% {border-radius: 0;background:#E4E4ED ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
+  66% {border-radius: 0;background:#6F6D91 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
+}
