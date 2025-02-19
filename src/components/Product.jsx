@@ -32,7 +32,7 @@ const Product = ({post}) => {
             <img src={post.image}/>
           </div> 
           <div>
-            <p>{post.price}</p>
+            <p>${post.price}</p>
           </div>
           <button>
             {
