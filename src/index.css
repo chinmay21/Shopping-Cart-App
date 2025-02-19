@@ -12,3 +12,6 @@
   33% {border-radius: 0;background:#E4E4ED ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
   66% {border-radius: 0;background:#6F6D91 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
 }
+ .container-shadow:hover {
+  box-shadow: 10px 10px 41px 7px rgba(0,0,0,0.51);
+ }

@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Cart from './pages/Cart'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
@@ -10,7 +12,8 @@ function App() {
 
   return (
     <div>
-      <div>
+      <ToastContainer/>
+      <div className='bg-slate-900'>
         <Navbar/>
       </div>
       <Routes>
