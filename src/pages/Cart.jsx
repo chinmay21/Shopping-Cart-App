@@ -12,11 +12,11 @@ const Cart = () => {
         setTotalAmount(cart.reduce((acc, curr) => acc + curr.price,0));
     },[cart])
     return(
-        <div>
+        <div className="flex justify-center h-full">
           {
             cart.length > 0 ? 
-            (<div>
-                <div>
+            (<div className="flex w-[vw] justify-center">
+                <div className="w-[700px]">
                     {
                         cart.map((item, index) => (
                             <CartItem key={item.id} item={item} itemIndex={index}/>
@@ -24,19 +24,19 @@ const Cart = () => {
                     }
                 </div>
 
-                <div>
+                <div className="flex flex-col w-[450px] mt-[90px] pl-[40px] justify-between h-full" >
                   <div>
-                    <div>Your Cart</div>
-                    <div>Summary</div>
-                    <p>
-                        <span>Total Items:{cart.length}</span>
+                    <div className="text-green-600 text-xl uppercase font-semibold">Your Cart</div>
+                    <div className="text-green-600 text-4xl uppercase font-bold">Summary</div>
+                    <p className="text-gray-700 font-semibold text-xl mt-3">
+                        <span>Total Items: {cart.length}</span>
                     </p>
                   </div>
 
-                  <div>
-                   <p>Total Amount:${totalAmount}</p> 
-                   <button>
-                    CheckOut Now
+                  <div className="mb-[150px]">
+                   <p className="mb-7 text-gray-700 font-semibold text-xl">Total Amount: <span className="text-black">${totalAmount}</span></p> 
+                   <button className="w-full rounded-md px-4 py-2 bg-green-600 text-white font-bold text-xl hover:bg-white hover:text-green-600 transition duration-200 ease-in border">
+                    Checkout Now
                    </button>
                   </div> 
                 </div>
