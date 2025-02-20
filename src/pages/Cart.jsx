@@ -15,7 +15,7 @@ const Cart = () => {
         <div className="flex justify-center h-full">
           {
             cart.length > 0 ? 
-            (<div className="flex w-[vw] justify-center">
+            (<div className="flex w-[100vw] justify-center">
                 <div className="w-[700px]">
                     {
                         cart.map((item, index) => (
@@ -42,10 +42,10 @@ const Cart = () => {
                 </div>
             </div>) :
             (
-                <div>
-                   <h1>Your cart is empty!</h1>
+                <div className="flex flex-col justify-center h-[500px] gap-y-7 items-center">
+                   <h1 className="font-semibold text-xl text-gray-700">Your cart is empty!</h1>
                    <Link to={'/'}>
-                     <button>
+                     <button className="px-[40px] py-[10px] bg-green-600 text-white rounded-lg text-md font-semibold uppercase  hover:bg-white hover:text-green-600 transition duration-200 ease-in border">
                         Shop Now
                      </button>   
                    </Link> 

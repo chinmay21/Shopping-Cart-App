@@ -1,17 +1,24 @@
 @import "tailwindcss";
 
 .spinner {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background:#766DF4;
-    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-    animation: sh1 2s infinite cubic-bezier(0.3,1,0,1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#766DF4 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#766DF4);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s3 1s infinite linear;
 }
-@keyframes sh1 {
-  33% {border-radius: 0;background:#E4E4ED ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
-  66% {border-radius: 0;background:#6F6D91 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
-}
- .container-shadow:hover {
+@keyframes s3{ 
+  100%{transform: rotate(1turn)}
+} 
+.container-shadow:hover {
   box-shadow: 10px 10px 41px 7px rgba(0,0,0,0.51);
  }
+
+ .custom-loader {
+ 
+}
+
+
