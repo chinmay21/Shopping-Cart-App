@@ -31,7 +31,7 @@ const Product = ({post}) => {
           <div className="h-[180px]">
             <img src={post.image} className="h-full w-full"/>
           </div> 
-          <div className="flex gap-12 w-full mt-5">
+          <div className="flex gap-11 w-full mt-3">
             <div>
               <p className="text-green-600 font-semibold">${post.price}</p>
             </div>
